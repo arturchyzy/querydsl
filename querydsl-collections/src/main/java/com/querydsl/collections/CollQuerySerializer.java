@@ -129,7 +129,7 @@ public final class CollQuerySerializer extends SerializerBase<CollQuerySerialize
             for (Template.Element element : template.getElements()) {
                 Object rv = element.convert(args);
                 if (rv instanceof Expression) {                    
-                    ((Expression)rv).accept(this, context);
+                    ((Expression<?>)rv).accept(this, context);
                 } else if (element.isString()) {    
                     append(rv.toString());
                 } else {
