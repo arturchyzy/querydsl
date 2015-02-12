@@ -16,7 +16,7 @@ import static org.junit.Assert.assertEquals;
 
 public class JPAQueryMixinTest {
 
-    private JPAQueryMixin mixin = new JPAQueryMixin();
+    private JPAQueryMixin<?> mixin = new JPAQueryMixin<Object>();
 
     @Test
     public void Where_Null() {

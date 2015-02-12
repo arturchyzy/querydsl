@@ -427,7 +427,7 @@ public class QueryMixin<T> {
         if (o == this) {
             return true;
         } else if (o instanceof QueryMixin) {
-            QueryMixin q = (QueryMixin)o;
+            QueryMixin<?> q = (QueryMixin<?>)o;
             return q.metadata.equals(metadata);
         } else {
             return false;
